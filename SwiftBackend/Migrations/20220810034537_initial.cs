@@ -14,7 +14,7 @@ namespace SwiftBackend.Migrations
                 {
                     MacroId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Kelvin = table.Column<string>(type: "TEXT", nullable: false),
+                    Kelvin = table.Column<int>(type: "INTEGER", nullable: false),
                     Tint = table.Column<int>(type: "INTEGER", nullable: false)
                 },
                 constraints: table =>
@@ -69,7 +69,8 @@ namespace SwiftBackend.Migrations
                 {
                     FilterId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Kelvin = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Kelvin = table.Column<int>(type: "INTEGER", nullable: false),
                     Tint = table.Column<int>(type: "INTEGER", nullable: false),
                     CameraId = table.Column<int>(type: "INTEGER", nullable: true)
                 },
@@ -89,7 +90,8 @@ namespace SwiftBackend.Migrations
                 {
                     LenseId = table.Column<int>(type: "INTEGER", nullable: false)
                         .Annotation("Sqlite:Autoincrement", true),
-                    Kelvin = table.Column<string>(type: "TEXT", nullable: false),
+                    Name = table.Column<string>(type: "TEXT", nullable: false),
+                    Kelvin = table.Column<int>(type: "INTEGER", nullable: false),
                     Tint = table.Column<int>(type: "INTEGER", nullable: false),
                     CameraId = table.Column<int>(type: "INTEGER", nullable: true)
                 },

@@ -51,7 +51,10 @@ namespace SwiftBackend.Migrations
                     b.Property<int?>("CameraId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Kelvin")
+                    b.Property<int>("Kelvin")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -74,7 +77,10 @@ namespace SwiftBackend.Migrations
                     b.Property<int?>("CameraId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Kelvin")
+                    b.Property<int>("Kelvin")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("TEXT");
 
@@ -94,9 +100,8 @@ namespace SwiftBackend.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Kelvin")
-                        .IsRequired()
-                        .HasColumnType("TEXT");
+                    b.Property<int>("Kelvin")
+                        .HasColumnType("INTEGER");
 
                     b.Property<int>("Tint")
                         .HasColumnType("INTEGER");
